@@ -1,5 +1,6 @@
 import React from 'react';
 import {styles} from '../style.js'
+import PropTypes from 'prop-types';
 
 const images = {
   copycat: 'https://content.codecademy.com/courses/React/react_photo_copycat.png',
@@ -28,6 +29,13 @@ export class CopyCat extends React.Component {
       </div>
     );
   };
+}
+
+CopyCat.propTypes = {
+  copying: PropTypes.bool.isRequired,
+  toggleTape: PropTypes.func.isRequired,
+  input: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 
