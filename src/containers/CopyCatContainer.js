@@ -8,7 +8,7 @@ const images = {
 };
 
 
-class CopyCatContainer extends React.Component {
+export class CopyCatContainer extends React.Component {
     constructor(props) {
     super(props);
 
@@ -34,6 +34,3 @@ class CopyCatContainer extends React.Component {
     return <CopyCat copying={this.state.copying} toggleTape={this.toggleTape} handleChange={this.handleChange} input={this.state.input}/>
   };
 }
-
-
-ReactDOM.render(<CopyCat />, document.getElementById('app'));
