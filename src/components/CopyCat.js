@@ -12,26 +12,31 @@ export class CopyCat extends React.Component {
   render() {
     const copying = this.props.copying;
     const toggleTape = this.props.toggleTape;
+    const catName = this.props.name? this.props.name : 'Tom'
+    const value = this.props.input;
+    const handleChange = this.props.handleChange;
 
     const imgStyles = styles.imgStyles;
     const divStyles = styles.divStyles;
+
     return (
       <div style = {divStyles}>
-        <h1 style = {{ marginBottom: 80}} >Copy Cat</h1>
-        <input type="text" value={this.props.input} onChange={this.props.handleChange} />
+        <h1 style = {{ marginBottom: 80}} >Copy Cat {catName}</h1>
+        <input type="text" value={value} onChange={handleChange} />
         <img 
           alt='cat'
           src={copying ? images.copycat : images.quietcat}
           onClick={toggleTape}
           style={imgStyles}
         />
-        <p>{copying && this.props.input}</p>
+        <p>{copying && value}</p>
       </div>
     );
   };
 }
 
 CopyCat.propTypes = {
+  name: PropTypes.string,
   copying: PropTypes.bool.isRequired,
   toggleTape: PropTypes.func.isRequired,
   input: PropTypes.string.isRequired,
