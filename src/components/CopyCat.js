@@ -24,6 +24,7 @@ export class CopyCat extends React.Component {
           onClick={toggleTape}
           style={imgStyles}
         />
+        <p>{copying && this.props.input}</p>
       </div>
     );
   };
