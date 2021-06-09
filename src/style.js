@@ -28,3 +28,9 @@ const imgStyles = {
   marginTop: marginTop,
   width: width
 };
+
+// create a styles object and export it
+export const styles = {
+  divStyles: divStyles,
+  imgStyles: imgStyles
+};
