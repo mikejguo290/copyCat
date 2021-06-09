@@ -14,7 +14,8 @@ export class CopyCatContainer extends React.Component {
 
     this.state = { 
       copying: true,
-      input:''
+      input:'',
+      name:'Garfield'
     };
 
     this.toggleTape = this.toggleTape.bind(this);
@@ -31,6 +32,6 @@ export class CopyCatContainer extends React.Component {
   }
   
   render() {
-    return <CopyCat copying={this.state.copying} toggleTape={this.toggleTape} handleChange={this.handleChange} input={this.state.input}/>
+    return <CopyCat copying={this.state.copying} toggleTape={this.toggleTape} handleChange={this.handleChange} input={this.state.input} name={this.state.name} />
   };
 }
