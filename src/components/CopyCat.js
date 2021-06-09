@@ -6,10 +6,10 @@ const images = {
 };
 
 export class CopyCat extends React.Component {
-// presentational component
+// presentational
   render() {
-    const copying = this.state.copying;
-    const toggleTape = this.toggleTape
+    const copying = this.props.copying;
+    const toggleTape = this.props.toggleTape;
     
     return (
       <div>
