@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {CopyCat} from '../components/CopyCat';
 
 const images = {
   copycat: 'https://content.codecademy.com/courses/React/react_photo_copycat.png',
@@ -7,7 +8,7 @@ const images = {
 };
 
 
-class CopyCat extends React.Component {
+class CopyCatContainer extends React.Component {
     constructor(props) {
     super(props);
 
@@ -23,19 +24,7 @@ class CopyCat extends React.Component {
   }
   
   render() {
-    const copying = this.state.copying;
-    const toggleTape = this.toggleTape
-    
-    return (
-      <div>
-        <h1>Copy Cat</h1>
-        <img 
-          alt='cat'
-          src={copying ? images.copycat : images.quietcat}
-          onClick={toggleTape}
-        />
-      </div>
-    );
+    return <CopyCat />
   };
 }
 
