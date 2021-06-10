@@ -12,7 +12,7 @@ export class CopyCat extends React.Component {
   render() {
     const copying = this.props.copying;
     const toggleTape = this.props.toggleTape;
-    const catName = this.props.name? this.props.name : 'Tom'
+    
     const value = this.props.input;
     const handleChange = this.props.handleChange;
 
@@ -21,7 +21,7 @@ export class CopyCat extends React.Component {
 
     return (
       <div style = {divStyles}>
-        <h1 style = {{ marginBottom: 80}} >Copy Cat {catName}</h1>
+        <h1 style = {{ marginBottom: 80}} >Copy Cat {this.props.name || 'Tom'}</h1>
         <input type="text" value={value} onChange={handleChange} />
         <img 
           alt='cat'
